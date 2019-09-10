@@ -33,6 +33,40 @@ h4 {
     font-weight: normal;
 }
 
+#to-top {
+    position: fixed;
+    z-index: 900;
+    bottom: 4vh;
+    right: -100px;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.9);
+    background: #cccccc;
+    text-align: center;
+    transition: all 2s;
+}
+
+.active #to-top {
+    right: 2vw;
+    transform: rotate(-180deg);
+    transition: all 2s;
+}
+
+#to-top:hover {
+    transition: 0.4s;
+    background: #ff1313;
+}
+
+#to-top img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+}
+
 .welcome {
     width: 100%;
     min-height: 100vh;
@@ -407,10 +441,12 @@ header a:hover {
     text-transform: uppercase;
     font-weight: 700;
 }
-.services-block img:hover{
-        transform: scale(1.1);
-        transition: 0.4s;
-    }
+
+.services-block img:hover {
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
 .services-block-about {
     text-align: left;
     margin: 0 20px;
@@ -575,9 +611,9 @@ input[type="submit"]:hover {
 }
 
 footer {
-    background: rgb(207,14,14);
-background: linear-gradient(90deg, rgba(207,14,14,1) 0%,
-rgba(247,41,41,1) 44%, rgba(254,127,0,1) 100%);
+    background: rgb(207, 14, 14);
+    background: linear-gradient(90deg, rgba(207, 14, 14, 1) 0%,
+    rgba(247, 41, 41, 1) 44%, rgba(254, 127, 0, 1) 100%);
     text-align: center;
     padding: 50px 0;
     color: #f1f1f1;
@@ -619,6 +655,11 @@ footer p {
 
 
 @media only screen and (max-width: 998px) {
+    #to-top {
+        width: 10vw;
+        height: 10vw;
+    }
+
     .idea-text {
         max-width: 30%;
     }
@@ -813,6 +854,11 @@ footer p {
 }
 
 @media only screen and (max-width: 500px) {
+    #to-top {
+        width: 17vw;
+        height: 17vw;
+    }
+
     .welcome h1 {
         font-size: 24px;
     }
@@ -884,6 +930,7 @@ footer p {
         margin-top: 40px;
         padding: 0 10px;
     }
+
     .services-block-about {
         font-size: 14px;
         margin-top: 40px;

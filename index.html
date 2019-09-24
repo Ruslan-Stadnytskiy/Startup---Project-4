@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, user-scalable=no, initial-scale=1.0,
      maximum-scale=1.0, minimum-scale=1.0" name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <link href="css/styles.css" rel="stylesheet">
     <link href="slick/slick.css" rel="stylesheet" type="text/css"/>
     <link href="slick/slick-theme.css" rel="stylesheet" type="text/css"/>
+    <link href="css/fm.revealator.jquery.min.css" rel="stylesheet">
     <title>Startup</title>
 </head>
 <body class="body">
@@ -22,16 +24,16 @@
 </div>
 <div class="sidebar">
     <ul>
-        <li><a class="menu-toggle" data-target="anchor" href="#wrapper">Home
-        </a></li>
-        <li><a class="menu-toggle" data-target="anchor" href="#services">Services</a>
-        </li>
-        <li><a class="menu-toggle" data-target="anchor" href="#services-title">About</a>
-        </li>
+        <li><a class="menu-toggle" data-target="anchor"
+               href="#wrapper">Home</a></li>
+        <li><a class="menu-toggle" data-target="anchor"
+               href="#services">Services</a></li>
+        <li><a class="menu-toggle" data-target="anchor"
+               href="#services-title">About</a></li>
         <li><a class="menu-toggle" data-target="anchor"
                href="#slider">Clients</a></li>
-        <li><a class="menu-toggle" data-target="anchor" href="#touch-content">Contacts</a>
-        </li>
+        <li><a class="menu-toggle" data-target="anchor"
+               href="#touch-content">Contacts</a></li>
     </ul>
     <span class="fader menu-toggle"></span>
 </div>
@@ -58,7 +60,9 @@
             <div class="text-animated"><h1>Welcome to STARTUP</h1></div>
             <div class="text-animated"><h4>Your Favourite Creative Agency
                 Template</h4></div>
-            <a class="start-button" data-target="anchor" href="#started">
+            <a class="start-button"
+               data-target="anchor"
+               href="#started">
                 <span class="button__line button__line--top"></span>
                 <span class="button__line button__line--right"></span>
                 <span class="button__line button__line--bottom"></span>
@@ -67,13 +71,14 @@
         </section>
         <section class="vitrages" id="started">
             <div class="idea-block">
-                <div class="stained-glass stained-glass-first">
+                <div class="stained-glass
+                 stained-glass-first revealator-slideright">
                     <div class="stained-glass-part"></div>
                     <div class="stained-glass-part"></div>
                     <div class="stained-glass-part"></div>
                     <div class="stained-glass-part"></div>
                 </div>
-                <div class="idea-text">
+                <div class="idea-text revealator-slideup">
                     <div class="idea-header">
                         <img alt="#" src="images/date.png">
                         <div class="idea-titles">
@@ -99,7 +104,7 @@
             </div>
             <hr>
             <div class="designe-block">
-                <div class="idea-text">
+                <div class="idea-text revealator-slideup">
                     <div class="idea-header">
                         <img alt="#" src="images/date.png">
                         <div class="idea-titles">
@@ -122,7 +127,7 @@
                         diam </p>
                     <a href="#">Read More</a>
                 </div>
-                <div class="stained-glass stained-glass-second">
+                <div class="stained-glass stained-glass-second revealator-slideleft">
                     <div class="stained-glass-part"></div>
                     <div class="stained-glass-part"></div>
                     <div class="stained-glass-part"></div>
@@ -138,21 +143,24 @@
             <p>We offer ipsum dolor sit amet,
                 consetetur sadipscing elitr amet</p>
             <div class="services-content">
-                <div class="services-block">
+                <div
+                        class="services-block revealator-zoomout revealator-delay1">
                     <img alt="#" src="images/icon-1.png">
                     <h5>Clean Typography</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Minima maxime quam architecto quo inventore
                         harum ex magni, dicta impedit. Lorem ipsum.</p>
                 </div>
-                <div class="services-block">
+                <div
+                        class="services-block revealator-zoomout revealator-delay2">
                     <img alt="#" src="images/icon-2.png">
                     <h5>Rock solid code</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Minima maxime quam architecto quo inventore
                         harum ex magni, dicta impedit. Lorem ipsum.</p>
                 </div>
-                <div class="services-block">
+                <div
+                        class="services-block revealator-zoomout revealator-delay3">
                     <img alt="#" src="images/icon-3.png">
                     <h5>Expert support</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -167,7 +175,7 @@
             </div>
             <p>Ipsum dolor sit amet,
                 consetetur sadipscing elitr amet</p>
-            <div class="services-content">
+            <div class="services-content revealator-slideup revealator-delay2">
                 <div class="services-block-about">Lorem ipsum dolor sit amet,
                     consetetur sadipscing elitr, sediam nonumy eirmod tempor
                     invidunt ut labore et dolore aliquyam erat, sed diam
@@ -187,36 +195,38 @@
                     ipsum eat.
                 </div>
             </div>
-            <div id="slider">
-                <div class="slide">
-                    <img alt="#" src="images/slide-img1.jpg">
-                    <h4>Md. Khalil Uddin</h4>
-                    <h5>Head of ideas</h5>
-                </div>
-                <div class="slide">
-                    <img alt="#" src="images/slide-img2.jpg">
-                    <h4>Rubel Miah</h4>
-                    <h5>Lead WordPress Developer</h5>
-                </div>
-                <div class="slide">
-                    <img alt="#" src="images/slide-img3.jpg">
-                    <h4>Shamim Mia</h4>
-                    <h5>Sr. Web Developer</h5>
-                </div>
-                <div class="slide">
-                    <img alt="#" src="images/slide-img4.jpg">
-                    <h4>John Doe</h4>
-                    <h5>Front-end Developer</h5>
-                </div>
-                <div class="slide">
-                    <img alt="#" src="images/slide-img2.jpg">
-                    <h4>Rubel Miah</h4>
-                    <h5>Lead WordPress Developer</h5>
-                </div>
-                <div class="slide">
-                    <img alt="#" src="images/slide-img3.jpg">
-                    <h4>Shamim Mia</h4>
-                    <h5>Sr. Web Developer</h5>
+            <div class="slider-anim revealator-zoomin revealator-delay2">
+                <div id="slider">
+                    <div class="slide">
+                        <img alt="#" src="images/slide-img1.jpg">
+                        <h4>Md. Khalil Uddin</h4>
+                        <h5>Head of ideas</h5>
+                    </div>
+                    <div class="slide">
+                        <img alt="#" src="images/slide-img2.jpg">
+                        <h4>Rubel Miah</h4>
+                        <h5>Lead WordPress Developer</h5>
+                    </div>
+                    <div class="slide">
+                        <img alt="#" src="images/slide-img3.jpg">
+                        <h4>Shamim Mia</h4>
+                        <h5>Sr. Web Developer</h5>
+                    </div>
+                    <div class="slide">
+                        <img alt="#" src="images/slide-img4.jpg">
+                        <h4>John Doe</h4>
+                        <h5>Front-end Developer</h5>
+                    </div>
+                    <div class="slide">
+                        <img alt="#" src="images/slide-img2.jpg">
+                        <h4>Rubel Miah</h4>
+                        <h5>Lead WordPress Developer</h5>
+                    </div>
+                    <div class="slide">
+                        <img alt="#" src="images/slide-img3.jpg">
+                        <h4>Shamim Mia</h4>
+                        <h5>Sr. Web Developer</h5>
+                    </div>
                 </div>
             </div>
         </section>
@@ -227,7 +237,8 @@
             <p>Lorem ipsum dolor sit amet,
                 consetetur sadipscing elitr amet</p>
             <div id="touch-content">
-                <div class="touch-content-left">
+                <div class="touch-content-left
+                 revealator-slideright revealator-delay2">
                     <div class="left-slide">
                         <img alt="#" src="images/adress.png">
                         <h5>Address</h5>
@@ -246,7 +257,8 @@
                         <p>shapedtheme@gmail.com khalilkode@gmail.com</p>
                     </div>
                 </div>
-                <div class="touch-content-right">
+                <div class="touch-content-right
+                 revealator-rotateleft revealator-delay2">
                     <form action="#" method="post" name="f1">
                         <div class="inputs-container">
                             <div class="inputs-left">
@@ -292,6 +304,7 @@
 </div>
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="slick/slick.min.js"></script>
+<script src="js/fm.revealator.jquery.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

@@ -158,6 +158,9 @@ header a:hover {
     background: url(../images/wave-loop.png) repeat-y;
     -webkit-background-clip: text;
     background-clip: text;
+    animation: text-animate 30s linear infinite alternate;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
     -webkit-text-fill-color: transparent;
     -webkit-animation: text-animate 30s linear infinite alternate;
     -webkit-transform: translate3d(0, 0, 0);
@@ -168,6 +171,9 @@ header a:hover {
     background: url(../images/animated_text_fill.png) repeat-y;
     -webkit-background-clip: text;
     background-clip: text;
+    animation: text-animate 30s linear infinite alternate;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
     -webkit-text-fill-color: transparent;
     -webkit-animation: text-animate 30s linear infinite alternate;
     -webkit-transform: translate3d(0, 0, 0);
@@ -679,6 +685,10 @@ footer p {
 }
 
 @media only screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
     .main-nav {
         display: none;
     }

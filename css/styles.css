@@ -36,19 +36,22 @@ h4 {
 #to-top {
     position: fixed;
     z-index: 900;
-    bottom: 4vh;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     right: -100px;
-    width: 5vw;
-    height: 5vw;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.9);
-    background: #cccccc;
+    background: #e3e2e2;
     text-align: center;
     transition: all 2s;
 }
 
 .active #to-top {
-    right: 2vw;
+    right: 10px;
     transform: rotate(-180deg);
     transition: all 2s;
 }
@@ -57,14 +60,41 @@ h4 {
     transition: 0.4s;
     background: #ff1313;
 }
-
-#to-top img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    height: 50%;
+.arrow {
+   position: relative;
+    top:39%;
+    left: -2%;
+    width: 19px;
+    height: 50px;
+}
+.arrow span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    transform: rotate(45deg);
+    margin: -16px 0;
+    animation: arrow 2s infinite;
+}
+.arrow span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+    animation-delay: -0.4s;
+}
+@keyframes arrow {
+    0%{
+        opacity: 0;
+        transform: translate(0,-10px) rotate(45deg);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translate(0,10px) rotate(45deg);
+    }
 }
 
 .welcome {
@@ -123,16 +153,16 @@ header a:hover {
 }
 
 .main-nav a {
-    padding: 5px;
-    border-radius: 8px;
+    padding: 7px;
+    border-radius: 2px;
     font-size: 16px;
     font-weight: 500;
     transition: 0.4s;
 }
 
 .main-nav a:hover {
-    color: #f00;
-    box-shadow: 0 0 7px rgba(255, 0, 0, 0.9);
+    color: #fff;
+    background:rgba(255, 50, 0, 0.6);
 }
 
 .welcome h1 {
@@ -155,7 +185,7 @@ header a:hover {
 }
 
 .text-animated {
-    background: url(../images/wave-loop.png) repeat-y;
+    background:url(../images/wave-loop.png)0 0  repeat-y;
     -webkit-background-clip: text;
     background-clip: text;
     animation: text-animate 30s linear infinite alternate;
@@ -267,6 +297,8 @@ header a:hover {
 .vitrages {
     min-height: 400px;
     color: #6a6a6a;
+    max-width: 1150px;
+    margin: 0 auto;
 }
 
 .idea-block {
@@ -274,14 +306,6 @@ header a:hover {
     padding-bottom: 50px;
     display: flex;
     justify-content: center;
-}
-
-.stained-glass-first {
-    --image: url(../images/vintage.jpg)
-}
-
-.stained-glass-second {
-    --image: url(../images/vintage2.jpg)
 }
 
 .stained-glass {
@@ -294,13 +318,15 @@ header a:hover {
 .stained-glass-part {
     position: absolute;
     box-shadow: 0 0 17px rgba(0, 0, 0, 0.9);
-    background-image: var(--image);
+    background-image: url(../images/vintage.jpg);
     background-size: 450px 300px;
     background-color: #ccc;
-    transition: all 1s;
+    transition: all .1s;
     border-radius: 4px;
 }
-
+.stained-glass-second .stained-glass-part{
+    background-image: url(../images/vintage2.jpg);
+}
 .stained-glass-part:hover {
     transform: scale(1.15);
 }
@@ -661,10 +687,7 @@ footer p {
 
 
 @media only screen and (max-width: 998px) {
-    #to-top {
-        width: 10vw;
-        height: 10vw;
-    }
+
 
     .idea-text {
         max-width: 30%;
@@ -717,7 +740,7 @@ footer p {
 
     .mobile-btn {
         margin-right: 20px;
-        border-radius: 12px;
+        border-radius: 4px;
         padding: 4px;
         cursor: pointer;
     }
@@ -779,9 +802,10 @@ footer p {
 
     .sidebar ul li a:hover {
         color: white;
-        box-shadow: 0 0 9px rgba(0, 0, 0, 0.9);
+        box-shadow: 0 0 9px rgba(93, 93, 93, 0.9);
+        background: #cccccc;
         transition: 0.3s;
-        border-radius: 13px;
+        border-radius: 2px;
     }
 
     .fader {
@@ -864,10 +888,6 @@ footer p {
 }
 
 @media only screen and (max-width: 500px) {
-    #to-top {
-        width: 17vw;
-        height: 17vw;
-    }
 
     .welcome h1 {
         font-size: 24px;
@@ -887,7 +907,7 @@ footer p {
     .stained-glass-part {
         position: absolute;
         box-shadow: 0 0 9px rgba(0, 0, 0, 0.9);
-        background-image: var(--image);
+        background-image: url(../images/vintage.jpg);
         background-size: 300px 200px;
         background-color: #ccc;
         transition: all 1s;
@@ -969,6 +989,17 @@ footer p {
 
     input[type="text"] {
         width: 95%;
+    }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+.text-animated {
+    background:none 0 0  repeat-y;
+}
+.welcome{
+    padding-top: 30vh;
+}
+.logo-animate {
+    background:none;
     }
 }
 

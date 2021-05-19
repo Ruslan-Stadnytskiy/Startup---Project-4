@@ -4,8 +4,8 @@ window.onload = function () {
     }
 
     let arr = document.querySelectorAll('.menu-toggle');
-    for (const value of arr) {
-        value.addEventListener('click', menu);
+    for (let i=0;i<=arr.length;i++){
+        arr[i].addEventListener('click', menu);
     }
 
 };
